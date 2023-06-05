@@ -1,0 +1,279 @@
+# Parameter List
+odometryFilePath: "/home/ucasmjc/Desktop/myslam/odometry/"
+root_source_cloud: "//home/ucasmjc/Desktop/myslam/cloud/"
+init_global_cloud: "/home/ucasmjc/Desktop/myslam/cloud/000000.pcd"
+icp_result: "/home/ucasmjc/Desktop/myslam/global/"
+bev_pointcloud_path: "/home/lin/Projects/bev2cloud/data/testCloud/"
+transSrcCloud_path: "/home/lin/Projects/bev2cloud/data/transScrCloud/"
+lidar_odom_path: "/home/lin/Projects/bev2cloud/data/lidar_odom.txt"
+ego_trajectory_path: "/home/lin/Projects/bev2cloud/data/ego_trajectory.pcd"
+ego_global_path: "/home/lin/Projects/bev2cloud/data/ego_global.pcd"
+wheel_odom_path: "/home/lin/Projects/bev2cloud/data/wheel_odometry/"
+wheel_odom_trajectory_path: "/home/lin/Projects/bev2cloud/data/odom_trajectory/wheel_odom_trajectory.pcd"
+imu_odom_path: "/home/lin/Projects/bev2cloud/data/imu/"
+
+# 各种odometry的轨迹路径
+imu_odom_trajectory_path: "/home/lin/Projects/bev2cloud/data/odom_trajectory/imu_odom_trajectory.pcd"
+gnss_odom_trajectory_path: "/home/lin/Projects/bev2cloud/data/odom_trajectory/gnss_odom_trajectory.pcd"
+ekf_odom_trajectory_path: "/home/lin/Projects/bev2cloud/data/odom_trajectory/ekf_odom_trajectory.pcd"
+lidar_odom_trajectory_path: "/home/lin/Projects/bev2cloud/data/odom_trajectory/lidar_odom_trajectory.pcd"
+
+coordinate_origin:
+    x: 1961.5
+    y: 1696
+
+imu2lidar_matrix: 
+[
+    0.00334014,
+    0.999924,
+    0.0118571,
+    -0.999837,
+    0.00312901,
+    0.0177801,
+    0.0177417,
+    -0.0119146,
+    0.999772,
+    -1.19292,
+    -0.0230692,
+    -1.28574
+]
+
+lidar2frontCam_matrix:
+[
+    -0.0300647,
+    -0.998422,
+    -0.0474372,
+    -0.311607,
+    0.0544556,
+    -0.948649,
+    0.949735,
+    -0.013739,
+    -0.312753,
+    -0.106268,
+    -0.454251,
+    -2.81915
+]
+
+imu2cam_transform_matrix:
+[
+    0.99731722,
+    -0.03262129,
+    -0.06553491,
+    -0.07231818,
+    -0.30011015,
+    -0.95115924,
+    0.01136024,
+    0.95334616,
+    -0.30166487,
+    0.01362148,
+    1.13593094,
+    -3.54967189
+]
+
+bev2chessboard_rotation:
+[   
+    0.02370431,
+    -0.18003645,
+    0.00593756
+] 
+
+bev2chessboard_translation:
+[   
+    -0.06394745664,
+    0.67166789597,
+    11.16899544864
+] 
+
+frontCam2chessboard_rotation:
+[
+    0.04981539,
+    -0.06991981,
+    0.04716412
+]
+
+frontCam2chessboard_translation:
+[
+    0.62800524239,
+    1.07698694566,
+    0.41913258409
+]
+
+frame_id:
+[
+    1,
+    200,
+    332,
+    # 389,
+    437,
+    642,
+    697,
+    881,
+    918,
+    1153,
+    1301,
+    1351,
+    1456,
+    1487,
+    # 1566,
+    1680,
+    1687,
+    1750,
+    # 1790,
+    # 1798,
+    1785,
+    1818,
+    1834,
+    # 1887,
+    1900,
+    1917,
+    1938,
+    1953,
+    1968,
+    1978
+]
+
+imu2lidar_yaw: -1.567455654690774
+imu2lidar_tx: -1.19292
+imu2lidar_ty: -0.0230692
+imu2lidar_tz: -1.28574
+lidar2wheel_x: -1.534709
+
+key_frame_dis: 1.0
+
+pointcloud_file_num: 1718
+gnss_odom_file_num: 1718
+imu_odom_file_num: 1718
+wheel_odom_file_num: 1718
+lidar_odom_file_num: 1718
+
+random_downsample_num: 3000
+voxel_downsample_leaf_size: 0.15
+icp_max_correspondence_distance: 0.1
+icp_maximum_iterations_mapping: 2000
+icp_maximum_iterations_relocation: 10
+icp_transformation_epsilon: 1e-10
+icp_euclidean_fitness_epsilon: 1e-6
+
+odom_flag: 0
+mapping_flag: 1
+relocation_flag: 0
+get_pointCloud_flag: 0
+manual_flag: 0
+manual_draw_parking_spot_flag: 0
+
+print_matrix_flag: 0
+draw_gnss_trajectory_flag: 0
+
+# 第一排
+parking_line_x0: -38
+parking_line_x1: -7
+
+i_equal0: 800
+i_smaller_then0: 4000
+# 第二排
+parking_line_x2: -31
+parking_line_x3: 1
+
+i_equal1: 7500
+i_smaller_then1: 10500
+# 第三排
+parking_line_x4: -31
+parking_line_x5: 7
+
+i_equal2: 11000
+i_smaller_then2: 15000
+# 第四排
+parking_line_x6: -27
+parking_line_x7: -7
+
+i_equal3: 20000
+i_smaller_then3: 23400
+
+# 第五排
+parking_line_x8: -27
+parking_line_x9: -7
+
+i_equal4: 23600
+i_smaller_then4: 25900
+
+# 第六排
+parking_line_x10: -29
+parking_line_x11: 1
+
+i_equal5: 26600
+i_smaller_then5: 27900
+
+# 第一列
+parking_line_z0: -14
+parking_line_z1: 1
+parking_line_x12: -42
+parking_line_x13: -37.5
+
+i_equal6: 7400
+i_smaller_then6: 20000
+
+
+
+
+parking_line_z2: 10
+parking_line_z3: 10
+parking_line_len0: 20
+
+x_1:
+[
+    -37.5, -35, 
+    -34.5, -32, 
+    -31.5, -29,
+    -28.5, -26,
+    -25.5, -23,
+    -22.5, -20,
+    -19.5, -17.5,
+    -15.4, 
+    -14, -11.5 
+]
+
+x_2:
+[
+    -31, -28.5,
+    -28, -25.5,
+    -22.5, -20,
+    -14, -11.5,
+    -9.5, -7,
+    -5.5, -3,
+    -1.5, 1,
+]
+
+x_3:
+[
+    -31, -28.5,
+    -28, -25.5,
+    -22.5, -20,
+    -14, -11.5,
+    -9.5, -7,
+    -5.5, -3,
+    -1.5, 1,
+    4.5, 7
+]
+
+z_1:
+[
+    -14.5, -12.5,
+    -11, -9,
+    -8.2, -6,
+    -4, -1.5,
+    -1, 1.5
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
